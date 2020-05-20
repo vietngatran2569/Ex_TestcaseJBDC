@@ -66,7 +66,7 @@ public class DBTest {
 
         assertThat(newOrder).isNotNull();
         assertThat(newOrder.getCustomer().getName()).isEqualTo("Nga");
-       assertThat(newOrder.getOrderDetailList().size()).isEqualTo(3);
+        assertThat(newOrder.getOrderDetailList().size()).isEqualTo(3);
         assertThat(newOrder.getOrderDetailList().stream()
                 .filter(orderDetail -> orderDetail.getProduct().getName().equals("nho")).count() >= 1).isTrue();
         assertThat(newOrder.getTotal()).isEqualTo(900);
